@@ -1,0 +1,107 @@
+CREATE SCHEMA pesquisa AUTHORIZATION postgres;
+GRANT ALL ON SCHEMA pesquisa TO postgres;
+
+CREATE TABLE pesquisa.regiao (
+	reg_id serial4 NOT NULL,
+	reg_nome varchar(15) NOT NULL,
+	CONSTRAINT regiao_pk PRIMARY KEY (reg_id),
+	CONSTRAINT regiao_unique UNIQUE (reg_nome)
+);
+INSERT INTO pesquisa.regiao(reg_nome) VALUES('Sul');
+
+CREATE TABLE pesquisa.estado (
+	est_id serial4 NOT NULL,
+	est_uf varchar(2) NOT NULL,
+	est_nome varchar(50) NOT NULL,
+	reg_id int4 NOT NULL,
+	CONSTRAINT estado_pk PRIMARY KEY (est_id),
+	CONSTRAINT estado_unique UNIQUE (est_uf),
+	CONSTRAINT estado_unique_1 UNIQUE (est_nome),
+	CONSTRAINT estado_regiao_fk FOREIGN KEY (reg_id) REFERENCES pesquisa.regiao(reg_id)
+);
+ALTER TABLE pesquisa.estado OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.estado TO postgres;
+INSERT INTO pesquisa.estado(est_uf, est_nome, reg_id) VALUES('PR','Paraná',1);
+
+
+ALTER TABLE pesquisa.regiao OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.regiao TO postgres;
+ALTER TABLE pesquisa.estado ADD CONSTRAINT estado_regiao_fk FOREIGN KEY (reg_id) REFERENCES pesquisa.regiao(reg_id);
+
+CREATE TABLE pesquisa.cidade (
+	cid_id serial4 NOT NULL,
+	cid_nome varchar(100) NOT NULL,
+	est_id int4 NOT NULL,
+	CONSTRAINT cidade_pk PRIMARY KEY (cid_id),
+	CONSTRAINT cidade_unique UNIQUE (cid_nome),
+	CONSTRAINT cidade_estado_fk FOREIGN KEY (est_id) REFERENCES pesquisa.estado(est_id)
+);
+ALTER TABLE pesquisa.cidade OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.cidade TO postgres;
+INSERT INTO pesquisa.cidade(cid_nome, est_id) VALUES('Curitiba',1);
+
+
+CREATE TABLE pesquisa.regional (
+	regional_id serial4 NOT NULL,
+	regional_nome varchar(50) NOT NULL,
+	cid_id int4 NOT NULL,
+	CONSTRAINT regional_pk PRIMARY KEY (regional_id),
+	CONSTRAINT regional_unique UNIQUE (regional_nome),
+	CONSTRAINT regional_cidade_fk FOREIGN KEY (cid_id) REFERENCES pesquisa.cidade(cid_id)
+);
+
+ALTER TABLE pesquisa.regional OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.regional TO postgres;
+
+
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Bairro Novo',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Boa Vista',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Boqueirão',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Cajuru',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('CIC',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Fazendinha',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Matriz',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Pinheirinho',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Santa Felicidade',1);
+INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Tatuquara',1);
+
+CREATE TABLE pesquisa.bairro (
+	bai_id serial4 NOT NULL,
+	bai_nome varchar(100) NOT NULL,
+	cid_id int4 NOT NULL,
+	regional_id int4 NOT NULL,
+	CONSTRAINT bairro_pk PRIMARY KEY (bai_id),
+	CONSTRAINT bairro_unique UNIQUE (bai_nome),
+	CONSTRAINT bairro_cidade_fk FOREIGN KEY (cid_id) REFERENCES pesquisa.cidade(cid_id),
+	CONSTRAINT bairro_regional_fk FOREIGN KEY (regional_id) REFERENCES pesquisa.regional(regional_id)
+);
+
+-- Permissions
+
+ALTER TABLE pesquisa.bairro OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.bairro TO postgres;
+
+
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Ganchinho',1,1);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Sitio Cercado',1,1);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Umbará',1,1);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Abranches',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Atuba',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Bacacheri',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Bairro Alto',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Barreirinha',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Boa Vista',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Cachoeira',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Pilarzinho',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Santa Cândida',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('São Lourenço',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Taboão',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Tarumã',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Tingui',1,2);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Alto Boqueirão',1,3);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Boqueirão',1,3);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Hauer',1,3);
+INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Xaxim',1,3);
+
+
+
