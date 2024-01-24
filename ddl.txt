@@ -158,3 +158,53 @@ INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Campo de Santa
 INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Caximba',1,10);
 INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Tatuquara',1,10);
 
+CREATE TABLE pesquisa.tipo_servico_saude (
+	tss_id serial4 NOT NULL,
+	tss_nome varchar(150) NOT NULL,
+	CONSTRAINT tipo_servico_saude_pk PRIMARY KEY (tss_id),
+	CONSTRAINT tipo_servico_saude_unique UNIQUE (tss_nome)
+);
+
+ALTER TABLE pesquisa.tipo_servico_saude OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.tipo_servico_saude TO postgres;
+
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Unidade de Saúde (US)');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Centro de Atenção Psicossocial');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Hospital Municipal');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Unidade de Pronto atendimento (UPA)');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Centro de especialidades médicas');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Centro de especialidades odontológicas');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Centro de orientações e acolhimento');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Ambulatório');
+INSERT INTO pesquisa.tipo_servico_saude(tss_nome)values('Hospital particular');
+
+CREATE TABLE pesquisa.servico_saude (
+	ssa_id serial4 NOT NULL,
+	ssa_nome varchar(150) NOT NULL,
+	ssa_endereco varchar(200) NOT NULL,
+	bai_id int4 NOT NULL,
+	tss_id int4 NOT NULL,
+	CONSTRAINT servico_saude_pk PRIMARY KEY (ssa_id),
+	CONSTRAINT servico_saude_unique UNIQUE (ssa_nome),
+	CONSTRAINT servico_saude_bairro_fk FOREIGN KEY (bai_id) REFERENCES pesquisa.bairro(bai_id),
+	CONSTRAINT servico_saude_tipo_servico_saude_fk FOREIGN KEY (tss_id) REFERENCES pesquisa.tipo_servico_saude(tss_id)
+);
+
+ALTER TABLE pesquisa.servico_saude OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.servico_saude TO postgres;
+
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Bairro Novo','Rua Paulo Rio Branco de Macedo, 791',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Coqueiros','Rua Coronel Victor Agner Kendrick, 80',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US João Cândido','Rua Ourizona, 2250',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Nossa Senhora Aparecida','Rua Carlos Amoretty Osório, 169',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Osternack','Rua Miguel Rossetim, 100',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Parigot de Souza','Rua João Eloy de Souza, 111',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Salvador Allende','Rua Celeste Tortato Gabardo, 1712',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Sambaqui','Rua Roberto Dala Barba, 44',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US São João Del Rey','Rua Realeza, 259',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Umbará I','Rua Dep. Pinheiro Junior, 915',3,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Umbará II','Rua Estanislau Selenko, 365',3,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('US Xapinhal','Rua Elbe de Macedo, 483',2,1);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('CAPS II Territorial Bairro Novo','Alameda Nossa Senhora do Sagrado Coração, 771 ',62,2);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('Centro Médico Comunitário Bairro Novo','Rua Jussara, 2234',2,3);
+INSERT INTO pesquisa.servico_saude(ssa_nome,ssa_endereco, bai_id, tss_id) values('UPA Sítio Cercado','Av. Levy Buquera, 700',2,4);
