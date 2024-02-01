@@ -1,0 +1,160 @@
+F00 - Demência na Doença de Alzheimer
+F01 - Demência Vascular
+F02 - Demência em Outras Doenças Classificadas em Outra Parte
+F03 - Demência Não Especificada
+F04 - Síndrome Amnésica Orgânica Não Induzida Pelo Álcool ou Por Outras Substâncias Psicoativas
+F05 - Delirium Não Induzido Pelo Álcool ou Por Outras Substâncias Psicoativas
+F06 - Outros Transtornos Mentais Devidos a Lesão e Disfunção Cerebral e a Doença Física
+F07 - Transtornos de Personalidade e do Comportamento Devidos a Doença, a Lesão e a Disfunção Cerebral
+F09 - Transtorno Mental Orgânico ou Sintomático Não Especificado
+F10 - Transtornos Mentais e Comportamentais Devidos ao Uso de Álcool
+F11 - Transtornos Mentais e Comportamentais Devidos ao Uso de Opiáceos
+F12 - Transtornos Mentais e Comportamentais Devidos ao Uso de Canabinóides
+F13 - Transtornos Mentais e Comportamentais Devidos ao Uso de Sedativos e Hipnóticos
+F14 - Transtornos Mentais e Comportamentais Devidos ao Uso da Cocaína
+F15 - Transtornos Mentais e Comportamentais Devidos ao Uso de Outros Estimulantes, Inclusive a Cafeína
+F16 - Transtornos Mentais e Comportamentais Devidos ao Uso de Alucinógenos
+F17 - Transtornos Mentais e Comportamentais Devidos ao Uso de Fumo
+F18 - Transtornos Mentais e Comportamentais Devidos ao Uso de Solventes Voláteis
+F19 - Transtornos Mentais e Comportamentais Devidos ao Uso de Múltiplas Drogas e ao Uso de Outras Substâncias Psicoativas
+F20 - Esquizofrenia
+F21 - Transtorno Esquizotípico
+F22 - Transtornos Delirantes Persistentes
+F23 - Transtornos Psicóticos Agudos e Transitórios
+F24 - Transtorno Delirante Induzido
+F25 - Transtornos Esquizoafetivos
+F28 - Outros Transtornos Psicóticos Não-orgânicos
+F29 - Psicose Não-orgânica Não Especificada
+F30 - Episódio Maníaco
+F31 - Transtorno Afetivo Bipolar
+F32 - Episódios Depressivos
+F33 - Transtorno Depressivo Recorrente
+F34 - Transtornos de Humor (afetivos) Persistentes
+F38 - Outros Transtornos do Humor (afetivos)
+F39 - Transtorno do Humor (afetivo) Não Especificado
+F40 - Transtornos Fóbico-ansiosos
+F41 - Outros Transtornos Ansiosos
+F42 - Transtorno Obsessivo-compulsivo
+F43 - "Reações ao ""stress"" Grave e Transtornos de Adaptação"
+F44 - Transtornos Dissociativos (de Conversão)
+F45 - Transtornos Somatoformes
+F48 - Outros Transtornos Neuróticos
+F50 - Transtornos da Alimentação
+F51 - Transtornos Não-orgânicos do Sono Devidos a Fatores Emocionais
+F52 - Disfunção Sexual, Não Causada Por Transtorno ou Doença Orgânica
+F53 - Transtornos Mentais e Comportamentais Associados ao Puerpério, Não Classificados em Outra Parte
+F54 - Fatores Psicológicos ou Comportamentais Associados a Doença ou a Transtornos Classificados em Outra Parte
+F55 - Abuso de Substâncias Que Não Produzem Dependência
+F59 - Síndromes Comportamentais Associados a Transtornos Das Funções Fisiológicas e a Fatores Físicos, Não Especificadas
+F60 - Transtornos Específicos da Personalidade
+F61 - Transtornos Mistos da Personalidade e Outros Transtornos da Personalidade
+F62 - Modificações Duradouras da Personalidade Não Atribuíveis a Lesão ou Doença Cerebral
+F63 - Transtornos Dos Hábitos e Dos Impulsos
+F64 - Transtornos da Identidade Sexual
+F65 - Transtornos da Preferência Sexual
+F66 - Transtornos Psicológicos e Comportamentais Associados ao Desenvolvimento Sexual e à Sua Orientação
+F68 - Outros Transtornos da Personalidade e do Comportamento do Adulto
+F69 - Transtorno da Personalidade e do Comportamento do Adulto, Não Especificado
+F90 - Transtornos Hipercinéticos
+F91 - Distúrbios de Conduta
+F92 - Transtornos Mistos de Conduta e Das Emoções
+F95 - Tiques
+F99 - Transtorno Mental Não Especificado em Outra Parte
+Y96 - Circunstância Relativa às Condições de Trabalho
+Y97 - Circunstâncias Relativas a Condições de Poluição Ambiental
+Y98 - Circunstâncias Relativas a Condições do Modo de Vida
+Z55 - Problemas Relacionados Com a Educação e Com a Alfabetização
+Z56 - Problemas Relacionados Com o Emprego e Com o Desemprego
+Z57 - Exposição Ocupacional a Fatores de Risco
+Z58 - Problemas Relacionados Com o Ambiente Físico
+Z59 - Problemas Relacionados Com a Habitação e Com as Condições Econômicas
+Z60 - Problemas Relacionados Com o Meio Social
+Z62 - Outros Problemas Relacionados Com a Educação da Criança
+Z63 - Outros Problemas Relacionados Com o Grupo Primário de Apoio, Inclusive Com a Situação Familiar
+Z64 - Problemas Relacionados Com Algumas Outras Circunstâncias Psicossociais
+Z65 - Problemas Relacionados Com Outras Circunstâncias Psicossociais
+Z72 - Problemas Relacionados Com o Estilo de Vida
+Z73 - Problemas Relacionados Com a Organização de Seu Modo de Vida
+Z74 - Problemas Relacionados Com a Dependência de Uma Pessoa Que Oferece Cuidados de Saúde
+Z75 - Problemas Relacionados Com as Facilidades Médicas e Outros Cuidados de Saúde
+
+
+"F00",\
+"F01",\
+"F02",\
+"F03",\
+"F04",\
+"F05",\
+"F06",\
+"F07",\
+"F09",\
+"F10",\
+"F11",\
+"F12",\
+"F13",\
+"F14",\
+"F15",\
+"F16",\
+"F17",\
+"F18",\
+"F19",\
+"F20",\
+"F21",\
+"F22",\
+"F23",\
+"F24",\
+"F25",\
+"F28",\
+"F29",\
+"F30",\
+"F31",\
+"F32",\
+"F33",\
+"F34",\
+"F38",\
+"F39",\
+"F40",\
+"F41",\
+"F42",\
+"F43",\
+"F44",\
+"F45",\
+"F48",\
+"F50",\
+"F51",\
+"F52",\
+"F53",\
+"F54",\
+"F55",\
+"F59",\
+"F60",\
+"F61",\
+"F62",\
+"F63",\
+"F64",\
+"F65",\
+"F66",\
+"F68",\
+"F69",\
+"F90",\
+"F91",\
+"F92",\
+"F95",\
+"F99",\
+"Y96",\
+"Y97",\
+"Y98",\
+"Z55",\
+"Z56",\
+"Z57",\
+"Z58",\
+"Z59",\
+"Z60",\
+"Z62",\
+"Z63",\
+"Z64",\
+"Z65",\
+"Z72",\
+"Z73",\
+"Z74",\
+"Z75",\
