@@ -22,6 +22,9 @@ CREATE TABLE pesquisa.estado (
 ALTER TABLE pesquisa.estado OWNER TO postgres;
 GRANT ALL ON TABLE pesquisa.estado TO postgres;
 INSERT INTO pesquisa.estado(est_uf, est_nome, reg_id) VALUES('PR','Paraná',1);
+INSERT INTO pesquisa.estado(est_id, est_uf, est_nome, reg_id) VALUES(2,'SC','Santa Catarina',1);
+INSERT INTO pesquisa.estado(est_id, est_uf, est_nome, reg_id) VALUES(3,'SP','São Paulo',1);
+INSERT INTO pesquisa.estado(est_id, est_uf, est_nome, reg_id) VALUES(4,'PI','Piauí',1);
 
 
 ALTER TABLE pesquisa.regiao OWNER TO postgres;
@@ -39,6 +42,65 @@ CREATE TABLE pesquisa.cidade (
 ALTER TABLE pesquisa.cidade OWNER TO postgres;
 GRANT ALL ON TABLE pesquisa.cidade TO postgres;
 INSERT INTO pesquisa.cidade(cid_nome, est_id) VALUES('Curitiba',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(2,'Colombo',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(3,'São José dos Pinhais',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(4,'Antonina',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(5,'Almirante Tamandaré',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(6,'Pinhais',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(7,'Fazenda Rio Grande',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(8,'Piraquara',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(9,'Contenda',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(10,'Não informado',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(11,'Londrina',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(12,'Morretes',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(13,'Araucaria',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(14,'Quitandinha',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(15,'Campina Grande do Sul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(16,'Guaratuba',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(17,'Mandirituba',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(18,'Campo Largo',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(19,'Campo Magro',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(20,'Balneário Camboriu',2);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(21,'Bituruna',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(22,'Blumenau',2);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(23,'Bocaiuva do Sul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(24,'Califórnia',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(25,'Campo do Tenente',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(26,'Cascavel',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(27,'Castanhal',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(28,'Cerro Azul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(29,'Cornélio Procópio',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(30,'Florianópolis',2);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(31,'Imbaú',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(32,'Imbituva',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(33,'Itajaí',2);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(34,'Itaperuçu',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(35,'Joaquim Távora',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(36,'Lapa',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(37,'Marmeleiro',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(38,'Matinhos',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(39,'Mato Rico',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(40,'Ortigueira',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(41,'Ourinhos',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(42,'Paranaguá',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(43,'Pato Branco',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(44,'Pitanga',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(45,'Pontal do Paraná',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(46,'Prudentópolis',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(47,'Quatro Barras',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(48,'Reserva',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(49,'Rio Branco do Sul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(50,'Santana de Parnaíba',3);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(51,'Santo André',3);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(52,'Santo Antonio do Sudoeste',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(53,'São Mateus do Sul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(54,'Telêmaco Borba',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(55,'Teresina',4);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(56,'Tijucas do Sul',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(57,'Turvo',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(58,'União da Vitória',1);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(59,'Joinville',2);
+INSERT INTO pesquisa.cidade(cid_id,cid_nome, est_id) VALUES(60,'Santos',3);
 
 
 CREATE TABLE pesquisa.regional (
@@ -64,6 +126,7 @@ INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Matriz',1);
 INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Pinheirinho',1);
 INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Santa Felicidade',1);
 INSERT INTO pesquisa.regional(regional_nome, cid_id)values('Tatuquara',1);
+INSERT INTO pesquisa.regional(regional_id, regional_nome, cid_id)values(11,'Regional não informada',10);
 
 CREATE TABLE pesquisa.bairro (
 	bai_id serial4 NOT NULL,
@@ -157,6 +220,7 @@ INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Vista Alegre',
 INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Campo de Santana',1,10);
 INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Caximba',1,10);
 INSERT INTO pesquisa.bairro(bai_nome, cid_id, regional_id)values('Tatuquara',1,10);
+INSERT INTO pesquisa.bairro(bai_id, bai_nome, cid_id, regional_id)values(76,'Bairro não informado',10,11);
 
 CREATE TABLE pesquisa.tipo_servico_saude (
 	tss_id serial4 NOT NULL,
@@ -340,4 +404,146 @@ INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_i
 INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(102, 'US Vila Machado', 'Rua Laudelino Ferreira Lopes, 2959', 60, 1, '0017329');
 INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(127, 'US Vista Alegre', 'Rua Miguel de Lazari, 51', 11, 1, '0017418');
 
+CREATE TABLE pesquisa.cid (
+	cid_id varchar(5) NOT NULL,
+	cid_nome varchar(150) NOT NULL,
+	CONSTRAINT cid_pk PRIMARY KEY (cid_id),
+	CONSTRAINT cid_unique UNIQUE (cid_nome)
+);
+
+ALTER TABLE pesquisa.cid OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.cid TO postgres;
+
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F00','Demência na Doença de Alzheimer');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F01','Demência Vascular');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F02','Demência em Outras Doenças Classificadas em Outra Parte');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F03','Demência Não Especificada');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F04','Síndrome Amnésica Orgânica Não Induzida Pelo Álcool ou Por Outras Substâncias Psicoativas');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F05','Delirium Não Induzido Pelo Álcool ou Por Outras Substâncias Psicoativas');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F06','Outros Transtornos Mentais Devidos a Lesão e Disfunção Cerebral e a Doença Física');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F07','Transtornos de Personalidade e do Comportamento Devidos a Doença, a Lesão e a Disfunção Cerebral');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F09','Transtorno Mental Orgânico ou Sintomático Não Especificado');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F10','Transtornos Mentais e Comportamentais Devidos ao Uso de Álcool');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F11','Transtornos Mentais e Comportamentais Devidos ao Uso de Opiáceos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F12','Transtornos Mentais e Comportamentais Devidos ao Uso de Canabinóides');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F13','Transtornos Mentais e Comportamentais Devidos ao Uso de Sedativos e Hipnóticos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F14','Transtornos Mentais e Comportamentais Devidos ao Uso da Cocaína');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F15','Transtornos Mentais e Comportamentais Devidos ao Uso de Outros Estimulantes, Inclusive a Cafeína');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F16','Transtornos Mentais e Comportamentais Devidos ao Uso de Alucinógenos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F17','Transtornos Mentais e Comportamentais Devidos ao Uso de Fumo');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F18','Transtornos Mentais e Comportamentais Devidos ao Uso de Solventes Voláteis');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F19','Transtornos Mentais e Comportamentais Devidos ao Uso de Múltiplas Drogas e ao Uso de Outras Substâncias Psicoativas');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F20','Esquizofrenia');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F21','Transtorno Esquizotípico');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F22','Transtornos Delirantes Persistentes');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F23','Transtornos Psicóticos Agudos e Transitórios');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F24','Transtorno Delirante Induzido');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F25','Transtornos Esquizoafetivos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F28','Outros Transtornos Psicóticos Não-orgânicos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F29','Psicose Não-orgânica Não Especificada');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F30','Episódio Maníaco');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F31','Transtorno Afetivo Bipolar');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F32','Episódios Depressivos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F33','Transtorno Depressivo Recorrente');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F34','Transtornos de Humor (afetivos) Persistentes');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F38','Outros Transtornos do Humor (afetivos)');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F39','Transtorno do Humor (afetivo) Não Especificado');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F40','Transtornos Fóbico-ansiosos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F41','Outros Transtornos Ansiosos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F42','Transtorno Obsessivo-compulsivo');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F43','Reações ao "stress" Grave e Transtornos de Adaptação');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F44','Transtornos Dissociativos (de Conversão)');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F45','Transtornos Somatoformes');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F48','Outros Transtornos Neuróticos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F50','Transtornos da Alimentação');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F51','Transtornos Não-orgânicos do Sono Devidos a Fatores Emocionais');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F52','Disfunção Sexual, Não Causada Por Transtorno ou Doença Orgânica');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F53','Transtornos Mentais e Comportamentais Associados ao Puerpério, Não Classificados em Outra Parte');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F54','Fatores Psicológicos ou Comportamentais Associados a Doença ou a Transtornos Classificados em Outra Parte');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F55','Abuso de Substâncias Que Não Produzem Dependência');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F59','Síndromes Comportamentais Associados a Transtornos Das Funções Fisiológicas e a Fatores Físicos, Não Especificadas');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F60','Transtornos Específicos da Personalidade');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F61','Transtornos Mistos da Personalidade e Outros Transtornos da Personalidade');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F62','Modificações Duradouras da Personalidade Não Atribuíveis a Lesão ou Doença Cerebral');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F63','Transtornos Dos Hábitos e Dos Impulsos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F64','Transtornos da Identidade Sexual');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F65','Transtornos da Preferência Sexual');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F66','Transtornos Psicológicos e Comportamentais Associados ao Desenvolvimento Sexual e à Sua Orientação');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F68','Outros Transtornos da Personalidade e do Comportamento do Adulto');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F69','Transtorno da Personalidade e do Comportamento do Adulto, Não Especificado');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F90','Transtornos Hipercinéticos');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F91','Distúrbios de Conduta');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F92','Transtornos Mistos de Conduta e Das Emoções');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F95','Tiques');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('F99','Transtorno Mental Não Especificado em Outra Parte');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Y96','Circunstância Relativa às Condições de Trabalho');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Y97','Circunstâncias Relativas a Condições de Poluição Ambiental');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Y98','Circunstâncias Relativas a Condições do Modo de Vida');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z55','Problemas Relacionados Com a Educação e Com a Alfabetização');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z56','Problemas Relacionados Com o Emprego e Com o Desemprego');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z57','Exposição Ocupacional a Fatores de Risco');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z58','Problemas Relacionados Com o Ambiente Físico');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z59','Problemas Relacionados Com a Habitação e Com as Condições Econômicas');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z60','Problemas Relacionados Com o Meio Social');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z62','Outros Problemas Relacionados Com a Educação da Criança');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z63','Outros Problemas Relacionados Com o Grupo Primário de Apoio, Inclusive Com a Situação Familiar');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z64','Problemas Relacionados Com Algumas Outras Circunstâncias Psicossociais');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z65','Problemas Relacionados Com Outras Circunstâncias Psicossociais');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z72','Problemas Relacionados Com o Estilo de Vida');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z73','Problemas Relacionados Com a Organização de Seu Modo de Vida');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z74','Problemas Relacionados Com a Dependência de Uma Pessoa Que Oferece Cuidados de Saúde');
+INSERT INTO pesquisa.cid(cid_id, cid_nome) VALUES('Z75','Problemas Relacionados Com as Facilidades Médicas e Outros Cuidados de Saúde');
+
+
+CREATE TABLE pesquisa.habitacao (
+	hab_id serial4 NOT NULL,
+	hab_nome varchar(150) NOT NULL,
+	CONSTRAINT habitacao_pk PRIMARY KEY (hab_id),
+	CONSTRAINT habitacao_unique UNIQUE (hab_nome)
+);
+
+ALTER TABLE pesquisa.habitacao OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.habitacao TO postgres;
+
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(1,'Tijolo / alvenaria com revestimento');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(2,'Madeira emparelhada');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(3,'Não informada');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(4,'Tijolo / alvenaria sem revestimento');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(5,'Outro material');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(6,'Taipa sem revestimento');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(7,'Material aproveitado');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(8,'Taipa com revestimento');
+INSERT INTO pesquisa.habitacao(hab_id, hab_nome) VALUES(9,'Palha');
+
+CREATE TABLE pesquisa.abastecimento (
+	aba_id serial4 NOT NULL,
+	aba_nome varchar(150) NOT NULL,
+	CONSTRAINT abastecimento_pk PRIMARY KEY (aba_id),
+	CONSTRAINT abastecimento_unique UNIQUE (aba_nome)
+);
+
+ALTER TABLE pesquisa.abastecimento OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.abastecimento TO postgres;
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(1,'Rede pública');
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(2,'Não informado');
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(3,'Outros');
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(4,'Poço artesiano');
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(5,'Carro pipa');
+INSERT INTO pesquisa.abastecimento(aba_id, aba_nome) VALUES(6,'cisterna');
+
+CREATE TABLE pesquisa.destino_lixo (
+	lix_id serial4 NOT NULL,
+	lix_nome varchar(150) NOT NULL,
+	CONSTRAINT destino_lixo_pk PRIMARY KEY (lix_id),
+	CONSTRAINT destino_lixo_unique UNIQUE (lix_nome)
+);
+
+ALTER TABLE pesquisa.destino_lixo OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.destino_lixo TO postgres;
+
+INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(1,'Coletado');
+INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(2,'Não informado');
+INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(3,'Queimado / enterrado');
+INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(4,'Céu aberto');
+INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(5,'Outros');
 
