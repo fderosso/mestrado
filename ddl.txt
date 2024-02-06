@@ -547,3 +547,115 @@ INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(3,'Queimado / enterra
 INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(4,'Céu aberto');
 INSERT INTO pesquisa.destino_lixo(lix_id, lix_nome) VALUES(5,'Outros');
 
+/* #################################################################################################### */
+
+CREATE TABLE pesquisa.tratamento_domicilio (
+	tdo_id serial4 NOT NULL,
+	tdo_nome varchar(150) NOT NULL,
+	CONSTRAINT tratamento_domicilio_pk PRIMARY KEY (tdo_id),
+	CONSTRAINT tratamento_domicilio_unique UNIQUE (tdo_nome)
+);
+
+ALTER TABLE pesquisa.tratamento_domicilio OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.tratamento_domicilio TO postgres;
+
+INSERT INTO pesquisa.tratamento_domicilio(tdo_id, tdo_nome) VALUES(1,'Filtração');
+INSERT INTO pesquisa.tratamento_domicilio(tdo_id, tdo_nome) VALUES(2,'Cloração');
+INSERT INTO pesquisa.tratamento_domicilio(tdo_id, tdo_nome) VALUES(3,'Sem tratamento');
+INSERT INTO pesquisa.tratamento_domicilio(tdo_id, tdo_nome) VALUES(4,'Não informado');
+INSERT INTO pesquisa.tratamento_domicilio(tdo_id, tdo_nome) VALUES(5,'Fervura');
+
+CREATE TABLE pesquisa.fezes_urina (
+	fur_id serial4 NOT NULL,
+	fur_nome varchar(150) NOT NULL,
+	CONSTRAINT fezes_urina_pk PRIMARY KEY (fur_id),
+	CONSTRAINT fezes_urina_unique UNIQUE (fur_nome)
+);
+
+ALTER TABLE pesquisa.fezes_urina OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.fezes_urina TO postgres;
+
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(1,'Sistema de esgoto');
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(2,'Fossa séptica');
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(3,'Não informado');
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(4,'Céu aberto');
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(5,'Fossa rudimentar');
+INSERT INTO pesquisa.fezes_urina(fur_id, fur_nome) VALUES(6,'Outros');
+
+CREATE TABLE pesquisa.grupo_comunitario (
+    grc_id serial4 NOT NULL,
+	grc_nome varchar(150) NOT NULL,
+	CONSTRAINT grupo_comunitario_pk PRIMARY KEY (grc_id),
+	CONSTRAINT grupo_comunitario_unique UNIQUE (grc_nome)
+);
+
+ALTER TABLE pesquisa.grupo_comunitario OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.grupo_comunitario TO postgres;
+
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(1,'Não participa');
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(2,'Não informado');
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(3,'Grupo religioso');
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(4,'Outros');
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(5,'Associação');
+INSERT INTO pesquisa.grupo_comunitario(grc_id, grc_nome) VALUES(6,'Cooperativa');
+
+CREATE TABLE pesquisa.meio_comunicacao (
+    mco_id serial4 NOT NULL,
+	mco_nome varchar(150) NOT NULL,
+	CONSTRAINT meio_comunicacao_pk PRIMARY KEY (mco_id),
+	CONSTRAINT meio_comunicacao_unique UNIQUE (mco_nome)
+);
+
+ALTER TABLE pesquisa.meio_comunicacao OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.meio_comunicacao TO postgres;
+
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(1,'Televisão');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(2,'Rádio');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(3,'Televisão, rádio, outros');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(4,'Televisão, rádio');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(5,'Não informado');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(6,'Outros');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(7,'Televisão, outros');
+INSERT INTO pesquisa.meio_comunicacao(mco_id, mco_nome) VALUES(8,'Rádio, outros');
+
+CREATE TABLE pesquisa.meio_transporte (
+    mtr_id serial4 NOT NULL,
+	mtr_nome varchar(150) NOT NULL,
+	CONSTRAINT meio_transporte_pk PRIMARY KEY (mtr_id),
+	CONSTRAINT meio_transporte_unique UNIQUE (mtr_nome)
+);
+
+ALTER TABLE pesquisa.meio_transporte OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.meio_transporte TO postgres;
+
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(1,'Ônibus');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(2,'Carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(3,'Não informado');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(4,'Caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(5,'Outros');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(6,'Ônibus, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(7,'Outros, ônibus');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(8,'Ônibus, carro, outros');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(9,'Outros, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(10,'Ônibus, metrô'); 1,METRO
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(11,'Ônibus, metrô, carro'); 1,METRO,2
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(12,'Carroça'); 2CA
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(13,'Carroça, carro'); 2CA,2
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(14,'Carroça, carro, caminhão'); 2CA,4
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(15,'Outros, metrô'); 5,METRO
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(16,'Ônibus, carroça'); 6CA
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(17,'Carroça, carro'); 6CA,2
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(18,'Carroça, carro, caminhão'); 6CA,2,4
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(19,'Carroça, ônibus, caminhão'); 6CA,4
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(20,'Outros, ônibus, metrô'); 7,METRO
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(21,'Outros, ônibus, metrô, carro'); 7,METRO,2
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(22,'Outros, ônibus, metrô, carroça, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(23,'Outros, ônibus, metrô, carroça, carro, caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(24,'Ônibus, carro, outros, carroça, caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(25,'Outros, carroça');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(26,'Metrô');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(27,'Ônibus, caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(28,'Ônibus, metrô, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(29,'Carro, caminhão');
+
+
