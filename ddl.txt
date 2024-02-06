@@ -658,4 +658,48 @@ INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(27,'Ônibus, camin
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(28,'Ônibus, metrô, carro');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(29,'Carro, caminhão');
 
+CREATE TABLE pesquisa.procedimento (
+    pro_id serial4 NOT NULL,
+	pro_nome varchar(500) NOT NULL,
+	CONSTRAINT procedimento_pk PRIMARY KEY (pro_id),
+	CONSTRAINT procedimento_unique UNIQUE (pro_nome)
+);
+
+ALTER TABLE pesquisa.procedimento OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.procedimento TO postgres;
+
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060096,'Atendimento médico em unidade de pronto atendimento');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010137,'Consulta / atendimento domiciliar');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010064,'Consulta médica em atenção primária');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010072,'Consulta médica em atenção especializada');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060029,'Atendimento de urgência com observação até 24 horas em atenção especializada');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060037,'Atendimento de urgência em atenção básica');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010056,'Consulta médica em saúde do trabalhador');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010080,'Consulta para acompanhamento de crescimento e desenvolvimento (puericultura)');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010110,'Consulta pré-natal');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(101040024,'Avaliação antropométrica');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019967,'Consulta em neurologia');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010129,'Consulta puerperal');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060096,'Atendimento médico em unidade de pronto atendimento');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301070075,'Atendimento / acompanhamento de paciente em reabilitação do desenvolvimento neuropsicomotor');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019860,'Resposta telerregulação / teleconsultoria');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060053,'Atendimento de urgência em atenção primária com remoção');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(802029981,'Procedimento administrativo');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060118,'Acolhimento com classificação de risco');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301050023,'Assistência domiciliar por equipe multiprofissional');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010307,'Teleconsulta médica na atenção especializada');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301090033,'Avaliação multidimensional da pessoa idosa');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010277,'Avaliação do desenvolvimento da criança na puericultura');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019940,'Telerregulação / teleconsultoria');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060045,'Observação por até 8 horas');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060053,'Remoção');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010234,'Parceiro');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301080011,'Abordagerm cognitiva comportamental do fumante (por atendimento / paciente)');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301070067,'Atendimento / acompanhamento em reabilitação nas múltiplas deficiências');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060045,'Atendimento de urgência em atenção primária com observação até 8 horas');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010013,'Consulta ao paciente curado de tuberculose (tratamento supervisionado)');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019916,'Consulta / atendimentos / acompanhamentos (radar)');
+INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010250,'Teleconsulta na atenção primária');
+
+
 
