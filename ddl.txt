@@ -644,25 +644,22 @@ INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(6,'Ônibus, carro'
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(7,'Outros, ônibus');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(8,'Ônibus, carro, outros');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(9,'Outros, carro');
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(10,'Ônibus, metrô'); 1,METRO
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(11,'Ônibus, metrô, carro'); 1,METRO,2
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(12,'Carroça'); 2CA
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(13,'Carroça, carro'); 2CA,2
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(14,'Carroça, carro, caminhão'); 2CA,4
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(15,'Outros, metrô'); 5,METRO
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(16,'Ônibus, carroça'); 6CA
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(17,'Carroça, carro'); 6CA,2
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(18,'Carroça, carro, caminhão'); 6CA,2,4
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(19,'Carroça, ônibus, caminhão'); 6CA,4
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(20,'Outros, ônibus, metrô'); 7,METRO
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(21,'Outros, ônibus, metrô, carro'); 7,METRO,2
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(10,'Ônibus, metrô');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(11,'Ônibus, metrô, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(12,'Carroça');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(13,'Carroça, carro');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(14,'Carroça, carro, caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(15,'Outros, metrô');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(16,'Ônibus, carroça');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(19,'Carroça, ônibus, caminhão');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(20,'Outros, ônibus, metrô');
+INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(21,'Outros, ônibus, metrô, carro');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(22,'Outros, ônibus, metrô, carroça, carro');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(23,'Outros, ônibus, metrô, carroça, carro, caminhão');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(24,'Ônibus, carro, outros, carroça, caminhão');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(25,'Outros, carroça');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(26,'Metrô');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(27,'Ônibus, caminhão');
-INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(28,'Ônibus, metrô, carro');
 INSERT INTO pesquisa.meio_transporte(mtr_id, mtr_nome) VALUES(29,'Carro, caminhão');
 
 CREATE TABLE pesquisa.procedimento (
@@ -687,7 +684,6 @@ INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010110,'Consulta p
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(101040024,'Avaliação antropométrica');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019967,'Consulta em neurologia');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010129,'Consulta puerperal');
-INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060096,'Atendimento médico em unidade de pronto atendimento');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301070075,'Atendimento / acompanhamento de paciente em reabilitação do desenvolvimento neuropsicomotor');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019860,'Resposta telerregulação / teleconsultoria');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060053,'Atendimento de urgência em atenção primária com remoção');
@@ -698,8 +694,6 @@ INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010307,'Teleconsul
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301090033,'Avaliação multidimensional da pessoa idosa');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010277,'Avaliação do desenvolvimento da criança na puericultura');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019940,'Telerregulação / teleconsultoria');
-INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060045,'Observação por até 8 horas');
-INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301060053,'Remoção');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010234,'Parceiro');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301080011,'Abordagerm cognitiva comportamental do fumante (por atendimento / paciente)');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301070067,'Atendimento / acompanhamento em reabilitação nas múltiplas deficiências');
@@ -743,7 +737,7 @@ CREATE TABLE pesquisa.atendimento (
 	cidade_id int4 NOT NULL,
 	bai_id int4 NOT NULL,
 	tat_id int4 NOT NULL,
-	CONSTRAINT tipo_atendimento_pk PRIMARY KEY (ate_id)
+	CONSTRAINT atendimento_pk PRIMARY KEY (ate_id)
 );
 
 ALTER TABLE pesquisa.atendimento OWNER TO postgres;
