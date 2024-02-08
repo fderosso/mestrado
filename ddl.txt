@@ -724,15 +724,15 @@ INSERT INTO pesquisa.tipo_atendimento(tat_id, tat_nome) VALUES(3,'Outro');
 
 CREATE TABLE pesquisa.atendimento (
     ate_id serial4 NOT NULL,
-	data_atendimento,
-	data_nascimento,
+	data_atendimento timestamp NOT NULL,
+	data_nascimento timestamp NOT NULL,
 	sexo varchar(1) NOT NULL,
 	ssa_cnes int4 NOT NULL,
 	pro_id int4 NOT NULL,
 	cid_id varchar(3) NOT NULL,
 	tdo_id int4 NOT NULL,
 	aba_id int4 NOT NULL,
-	energia varchar(2) NOT NULL,
+	energia varchar(3) NOT NULL,
 	hab_id int4 NOT NULL,
 	lix_id int4 NOT NULL,
 	fur_id int4 NOT NULL,
@@ -740,7 +740,7 @@ CREATE TABLE pesquisa.atendimento (
 	grc_id int4 NOT NULL,
 	mco_id int4 NOT NULL,
 	mtr_id int4 NOT NULL,
-	cid_id int4 NOT NULL,
+	cidade_id int4 NOT NULL,
 	bai_id int4 NOT NULL,
 	tat_id int4 NOT NULL,
 	CONSTRAINT tipo_atendimento_pk PRIMARY KEY (ate_id)
@@ -751,7 +751,9 @@ GRANT ALL ON TABLE pesquisa.atendimento TO postgres;
 
 /*
 
-="insert into pesquisa.atendimentos(data_atendimento,data_nascimento,sexo,ssa_cnes,pro_id,cid_id,tdo_id,aba_id,energia,hab_id,lix_id,fur_id,comodos,grc_id,mco_id,mtr_id,cid_id,bai_id,tat_id) values('"&A1&"','"&B1&"','"&C1&"',"&D1&","&E1&",'"&F1&"',"&G1&","&H1&",'"&I1&"',"&J1&","&K1&","&L1&","&M1&","&N1&","&O1&","&P1&","&Q1&","&R1&",1);"
+="insert into pesquisa.atendimento(data_atendimento,data_nascimento,sexo,ssa_cnes,pro_id,cid_id,tdo_id,aba_id,energia,hab_id,lix_id,fur_id,comodos,grc_id,mco_id,mtr_id,cidade_id,bai_id,tat_id) values(to_timestamp('"&A1&"','DD/MM/YYYY HH24:MI:SS'),to_timestamp('"&B1&"','DD/MM/YYYY HH24:MI:SS'),'"&C1&"',"&D1&","&E1&",'"&F1&"',"&G1&","&H1&",'"&I1&"',"&J1&","&K1&","&L1&","&M1&","&N1&","&O1&","&P1&","&Q1&","&R1&",1);"
+
+insert into pesquisa.atendimento(data_atendimento,data_nascimento,sexo,ssa_cnes,pro_id,cid_id,tdo_id,aba_id,energia,hab_id,lix_id,fur_id,comodos,grc_id,mco_id,mtr_id,cidade_id,bai_id,tat_id) values(to_timestamp('12/09/2016 14:34:31','DD/MM/YYYY HH24:MI:SS'),to_timestamp('04/10/1969 00:00:00','DD/MM/YYYY HH24:MI:SS'),'M',5323495,301060029,'F09',3,1,'Sim',1,1,1,4.0,1,1,1,1,75,3);
 
 
 */
