@@ -403,6 +403,13 @@ INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_i
 INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(101, 'US Vila Leão', 'Rua Primo Lourenço Tosin, 21', 36, 1, '0016772');
 INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(102, 'US Vila Machado', 'Rua Laudelino Ferreira Lopes, 2959', 60, 1, '0017329');
 INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(127, 'US Vista Alegre', 'Rua Miguel de Lazari, 51', 11, 1, '0017418');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(143, 'Centro de especialidades médicas encantar', 'Rua General Carneiro, 904', 48, 5, '0015466');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(144, 'UPA Matriz', 'Rua General Carneiro, 181', 48, 4, '7485085');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(145, 'Centro de especialidades Ouvidor Pardinho', 'Rua 24 de Maio, S/n', 48, 5, '7485085');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(146, 'US Medianeira', 'Avenida Anita Garibaldi, 2652', 13, 1, '5932238');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(147, 'US Ortese e Prótese', 'Waldemar Kost, 650', 19, 1, '3563413');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(148, 'US Higinópolis', 'Rua Madalena Sofia Barat, 725', 7, 1, '5701104');
+INSERT INTO pesquisa.servico_saude(ssa_id, ssa_nome, ssa_endereco, bai_id, tss_id, ssa_cnes) VALUES(149, 'Centro de Especialidades Mãe Curitibana', 'Rua Jaime Reis, 331', 58, 1, '5587956');
 
 CREATE TABLE pesquisa.cid (
 	cid_id varchar(5) NOT NULL,
@@ -701,5 +708,52 @@ INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010013,'Consulta a
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301019916,'Consulta / atendimentos / acompanhamentos (radar)');
 INSERT INTO pesquisa.procedimento(pro_id, pro_nome) VALUES(301010250,'Teleconsulta na atenção primária');
 
+CREATE TABLE pesquisa.tipo_atendimento (
+    tat_id serial4 NOT NULL,
+	tat_nome varchar(50) NOT NULL,
+	CONSTRAINT tipo_atendimento_pk PRIMARY KEY (tat_id),
+	CONSTRAINT tipo_atendimento_unique UNIQUE (tat_nome)
+);
+
+ALTER TABLE pesquisa.tipo_atendimento OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.tipo_atendimento TO postgres;
+
+INSERT INTO pesquisa.tipo_atendimento(tat_id, tat_nome) VALUES(1,'Enfermagem');
+INSERT INTO pesquisa.tipo_atendimento(tat_id, tat_nome) VALUES(2,'Médico');
+INSERT INTO pesquisa.tipo_atendimento(tat_id, tat_nome) VALUES(3,'Outro');
+
+CREATE TABLE pesquisa.atendimento (
+    ate_id serial4 NOT NULL,
+	data_atendimento,
+	data_nascimento,
+	sexo varchar(1) NOT NULL,
+	ssa_cnes int4 NOT NULL,
+	pro_id int4 NOT NULL,
+	cid_id varchar(3) NOT NULL,
+	tdo_id int4 NOT NULL,
+	aba_id int4 NOT NULL,
+	energia varchar(2) NOT NULL,
+	hab_id int4 NOT NULL,
+	lix_id int4 NOT NULL,
+	fur_id int4 NOT NULL,
+	comodos int4 NOT NULL,
+	grc_id int4 NOT NULL,
+	mco_id int4 NOT NULL,
+	mtr_id int4 NOT NULL,
+	cid_id int4 NOT NULL,
+	bai_id int4 NOT NULL,
+	tat_id int4 NOT NULL,
+	CONSTRAINT tipo_atendimento_pk PRIMARY KEY (ate_id)
+);
+
+ALTER TABLE pesquisa.atendimento OWNER TO postgres;
+GRANT ALL ON TABLE pesquisa.atendimento TO postgres;
+
+/*
+
+="insert into pesquisa.atendimentos(data_atendimento,data_nascimento,sexo,ssa_cnes,pro_id,cid_id,tdo_id,aba_id,energia,hab_id,lix_id,fur_id,comodos,grc_id,mco_id,mtr_id,cid_id,bai_id,tat_id) values('"&A1&"','"&B1&"','"&C1&"',"&D1&","&E1&",'"&F1&"',"&G1&","&H1&",'"&I1&"',"&J1&","&K1&","&L1&","&M1&","&N1&","&O1&","&P1&","&Q1&","&R1&",1);"
+
+
+*/
 
 
